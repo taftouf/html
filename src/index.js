@@ -178,7 +178,9 @@ class Web3Element extends LitElement {
   render() {
     return html`
       <main>
-        <button @click="${()=>{this.modalConnect = true}}" class="${tw``}"> Pay With Crypto</button>
+        <button @click="${()=>{this.modalConnect = true}}" class="${tw`border border-transparent hover:border-gray-300 bg-gray-300 dark:bg-white dark:hover:bg-gray-900 dark:hover:border-gray-900 dark:text-gray-900 dark:hover:text-white text-black flex flex-row justify-center items-center space-x-2 py-4 rounded w-full`}">
+         ${this.label}
+        </button>
         
         <!-- Connect Modal -->
         ${this.modalConnect ? 
